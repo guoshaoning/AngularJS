@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+    <meta charset="utf-8" />
+    <title>综合练习_首页</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/jquery.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="app/app.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row clearfix" ng-repeat="people in peoples | orderBy : 'id'">
+            <div class="col-md-12 column">
+                <div class="media">
+                    <a href="#" class="pull-left"><img src="images/a{{people.id}}.jpg" class="media-object" alt='' /></a>
+                    <div class="media-body">
+                        <h4 class="media-heading">
+                            {{people.name}}
+                        </h4>
+                        {{people.content}}
+                    </div>
+                </div>
+            </div>
+            <hr/>
+        </div>
+    </div>
+
+</body>
+</html>

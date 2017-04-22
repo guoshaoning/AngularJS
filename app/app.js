@@ -8,11 +8,11 @@ function routeConfig($routeProvider){
 	})
 	.when('/resume',{
 		controller:'ResumeController',
-		templateUrl:'resume.html'
+		templateUrl:'view/resume.html'
 	})
 	.when('/news',{
 		controller:'NewsController',
-		templateUrl:'news.html'
+		templateUrl:'view/news.html'
 	})
 	.otherwise({
 		redirectTo:'/index'
